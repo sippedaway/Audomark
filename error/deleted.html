@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you!</title>
+    <link rel="icon" type="image/x-icon" href="https://audomark.sipped.org/public/bg/favicon.png">
+    <link rel="stylesheet" href="https://audomark.sipped.org/public/login_styles.css"></link>
+    <style>
+    body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1,h3 {
+            margin-bottom:8px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="text-align:center;">That's it!</h1>
+
+        <h3>Thank you for using my website</h3>
+        <p>Your user profile picture and authentication method (which is literally just one word) may still stay as a cookie that will expire in less than a day, if it wasn't deleted already, but your account is definitely gone, lol.</p>
+
+        <p>I'll be honest, I hate companies shoving 'Give us feedback!' and crap down our throat so just, thank you for using this website, and have a great day. :)</p>
+        <p>- sipped</p>
+    </div>
+
+<script>
+
+function deleteAllCookies() {
+    const cookies = document.cookie.split(";");
+
+    cookies.forEach(cookie => {
+        const cookieName = cookie.split("=")[0].trim();
+        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+        console.log(`Cookie "${cookieName}" has been deleted.`);
+    });
+}
+
+</script>
+
+</body>
+</html>
