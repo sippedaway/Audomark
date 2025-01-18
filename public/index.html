@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Home | Audomark</title>
+    <link rel="icon" type="image/x-icon" href="https://audomark.sipped.org/public/bg/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- MOBILE -->
+    <div id="mobileHeader" class="mobile-header">
+        <button id="mobileEditButton" class="circle-button" onclick="window.location.href='https://audomark.sipped.org/statistics';">
+            <i class="fas fa-chart-line"></i>
+        </button>
+
+        <button id="mobileEditButton" class="circle-button" onclick="window.location.href='https://audomark.sipped.org/editor';">
+            <i class="fas fa-edit"></i>
+        </button>
+        <button id="mobileExportButton" class="circle-button" onclick="generateShareImage()">
+            <i class="fas fa-share"></i>
+        </button>
+        <button id="mobileThemeButton" class="circle-button" onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i>
+        </button>
+        <a onclick="window.location.href='https://audomark.sipped.org/settings';" id="account-link" target="_blank">
+            <img class="circle-icon" id="mpfp" src="" alt="Profile Picture">
+        </a>
+    </div>
+
+    <div class="mobile-content-padding"></div>
+
+    <div id="mobileSearchSortContainer" class="mobile-search-sort-container">
+        <div class="search-bar-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="msearchBar" placeholder="Search for artists or albums..." oninput="mhandleSearch()" class="search-bar">
+        </div>
+        <div>
+            <select id="msortOptions" onchange="mhandleSortChange()" class="sort-dropdown">
+                <option value="alphabetical">Sort from A to Z</option>
+                <option value="ratings">Sort by Ratings</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- WEB -->
+
+    <div class="nav-bar">
+        <a class="nav-bar-icon-button" onclick="window.location.href='https://audomark.sipped.org/';" target="_blank">
+            <img class="a-iconw" src="./bg/a_white.png" alt="arone icon"></img>
+            <img class="a-iconb" src="./bg/a_black.png" alt="arone icon"></img>
+        </a>
+
+        <div class="nav-bar-button-container">
+            <button id="currenttab" onclick="window.location.href='https://audomark.sipped.org/';" class="nav-bar-button" style="box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);">Home</button>
+            <button onclick="window.location.href='https://audomark.sipped.org/statistics';" class="nav-bar-button">Statistics</button>
+            <button onclick="window.location.href='https://audomark.sipped.org/editor';" class="nav-bar-button">Edit</button>
+        </div>
+
+        <a class="nav-bar-icon-button" onclick="window.location.href='https://audomark.sipped.org/settings';" target="_blank">
+            <img class="nav-bar-account-icon" id="pfp" src="" alt="Profile Picture">
+        </a>
+    </div>
+
+    <div class="search-sort-bar" style="margin-top: 20px;">
+        <div class="search-bar-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchBar" placeholder="Search for artists or albums..." oninput="handleSearch()" class="search-bar">
+        </div>
+
+        <div>
+            <label for="sortOptions" class="sort-label">Sort:</label>
+            <select id="sortOptions" onchange="handleSortChange()" class="sort-dropdown">
+                <option value="alphabetical">From A to Z</option>
+                <option value="ratings">By Ratings</option>
+            </select>
+        </div>
+
+        <button id="shareButton" onclick="generateShareImage()" class="hlbutton">Export as Image</button>
+    </div>
+
+    <div id="statusTextContainer" style="margin-top: 20px; text-align: center;">
+        <div id="statusText"></div>
+    </div>
+
+    <div class="content" id="content"></div>
+
+    <div id="albumPopup" class="album-popup" onclick="closeAlbumPopup()">
+        <button id="closePopup" class="close-popup-btn">Close</button>
+
+        <div class="popup-content">
+            <div class="popup-row">
+                <img id="popupAlbumCover" class="popup-album-cover" src="" alt="Album Cover">
+            </div>
+
+            <div class="popup-row">
+                <div class="popup-album-details">
+                    <h2 id="popupAlbumName" class="popup-album-name">Album Title</h2>
+                    <h3 id="popupArtistName" class="popup-artist-name">Artist Name</h3>
+                    <div id="popupRating" class="album-rating-bg">
+                        <span id="popupAlbumRating" class="popup-album-rating">Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</body>
+</html>

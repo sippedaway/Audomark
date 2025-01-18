@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete account | Audomark</title>
+    <link rel="icon" type="image/x-icon" href="https://audomark.sipped.org/public/bg/favicon.png">
+    <link rel="stylesheet" href="https://audomark.sipped.org/public/deleteaccount_styles.css"></link>
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="text-align:center;">Careful here!</h1>
+
+        <h3>Delete account</h3>
+        <p>Upon deletion: your artists, albums, rankings, etc. will be <b>permanently</b> deleted! This action is irreversible.</p>
+
+        <h3>Make sure it's the right account</h3>
+        <p>If you want to proceed with deleting, confirm this is your account details:</p>
+
+        <div id="accountContent" class="account-content"></div>
+
+        <div class="rule">
+            <input type="checkbox" id="imsure" onchange="toggleDeleteButton()">
+            <label for="imsure">I'm sure this is my account</label>
+        </div>
+
+        <button onclick="window.location.href='https://audomark.sipped.org/';" class="button">Go back</button>
+        <button onclick="deleteAccount()" id="deleteAccountButton" class="delete-button" disabled>Delete account</button>
+    </div>
+
+    <script src="deleteaccount_script.js"></script>
+
+</body>
+</html>

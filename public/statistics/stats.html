@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics | Audomark</title>
+    <link rel="stylesheet" href="stats_styles.css">
+    <link rel="icon" type="image/x-icon" href="https://audomark.sipped.org/public/bg/favicon.png">
+    <script src="stats_script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <a class="nav-bar-icon-button" onclick="window.location.href='https://audomark.sipped.org/';" target="_blank">
+            <img class="a-iconw" src="https://audomark.sipped.org/public/bg/a_white.png" alt="arone icon"></img>
+            <img class="a-iconb" src="https://audomark.sipped.org/public/bg/a_black.png" alt="arone icon"></img>
+        </a>
+
+        <div class="nav-bar-button-container">
+            <button onclick="window.location.href='https://audomark.sipped.org/';" class="nav-bar-button">Home</button>
+            <button id="currenttab" onclick="window.location.href='https://audomark.sipped.org/statistics';" class="nav-bar-button" style="box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);">Statistics</button>
+            <button onclick="window.location.href='https://audomark.sipped.org/editor';" class="nav-bar-button">Edit</button>
+        </div>
+
+        <a class="nav-bar-icon-button" onclick="window.location.href='https://audomark.sipped.org/settings';" target="_blank">
+            <img class="nav-bar-account-icon" id="pfp" src="" alt="Profile Picture">
+        </a>
+    </div>
+
+    <div class="stats-page">
+        <div class="left-column">
+            <div class="user-container">
+                <img id="pfp2" src="" alt="Profile Picture" class="profile-picture">
+                <p id="user-stats">Rated <span id="total-albums">0</span> albums from <span id="total-artists">0</span>
+                    artists</p>
+            </div>
+            <div class="pie-chart-container">
+                <canvas id="ratings-pie-chart"></canvas>
+            </div>
+            <div class="average-rating-container" style="margin-top: 40px;">
+                <p><b>Average Album Rating:</b> <span id="average-rating"">-</span></p>
+            </div>
+            <div class="all-100-container">
+                <h3>100 Albums</h3>
+                <ul id="all-100-albums"></ul>
+            </div>
+        </div>
+
+        <div class="middle-column">
+            <div class="top-10-albums-container">
+                <h3>Top 10 Albums</h3>
+                <ul id="top-10-albums"></ul>
+            </div>
+            <div class="worst-3-albums-container">
+                <h3>3 Worst Albums</h3>
+                <ul id="worst-3-albums"></ul>
+            </div>
+            <div class="longest-title-container">
+                <h3>Longest Album Title</h3>
+                <p id="longest-album-title">None yet!</p>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="top-10-artists-ratings-container">
+                <h3>Top 10 Artists by Ratings</h3>
+                <ul id="top-10-artists-ratings"></ul>
+            </div>
+            <div class="top-10-artists-albums-container">
+                <h3>Top 10 Artists by Most Albums</h3>
+                <ul id="top-10-artists-albums"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit | Audomark</title>
+    <link rel="icon" type="image/x-icon" href="https://audomark.sipped.org/public/bg/favicon.png">
+    <link rel="stylesheet" href="editor_styles.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <a class="nav-bar-icon-button" onclick="window.location.href='https://audomark.sipped.org/';" target="_blank">
+            <img class="a-iconw" src="https://audomark.sipped.org/public/bg/a_white.png" alt="arone icon"></img>
+            <img class="a-iconb" src="https://audomark.sipped.org/public/bg/a_black.png" alt="arone icon"></img>
+        </a>
+
+        <div class="nav-bar-button-container">
+            <button onclick="window.location.href='https://audomark.sipped.org/';" class="nav-bar-button">Home</button>
+            <button onclick="window.location.href='https://audomark.sipped.org/statistics';" class="nav-bar-button" >Statistics</button>
+            <button id="currenttab" onclick="window.location.href='https://audomark.sipped.org/editor';" class="nav-bar-button" style="box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);">Edit</button>
+        </div>
+
+        <a class="nav-bar-icon-button" onclick="window.location.href='https://audomark.sipped.org/settings';" target="_blank">
+            <img class="nav-bar-account-icon" id="pfp" src="" alt="Profile Picture">
+        </a>
+    </div>
+    
+    <div class="search-sort-bar">
+        <button onclick="switchView('manager')" id="managerTab" class="button">Regular</button>
+        <button onclick="switchView('guide')" id="guideTab" class="button">Guide</button>
+        <button onclick="saveData()" class="hlbutton">Save</button>
+    </div>
+
+    <div id="statusBar" class="status-bar">
+        Console | Edit your artist and album rankings
+    </div>
+
+    <div id="managerView" class="container">
+        <div class="left-panel">
+            <div class="search-bar-container" style="margin-bottom: 20px;">
+                <input type="text" id="searchBar" placeholder="Search for artists..." oninput="handleSearch()" class="search-bar">
+            </div>
+
+            <button onclick="addArtist()" class="button">+  Add Artist</button>
+            <div id="artistsContainer" class="artists-container">
+            </div>
+        </div>
+
+        <button onclick="saveData()" style="margin-top: 20px;" class="hlbutton">Save</button>
+    </div>
+
+    <div id="guideView" class="container hidden">
+
+        <h1>
+        An introduction
+        </h1>
+        <p>
+        Hiya!! Welcome to your editor. Here you can add artists, albums, rankings and manage your data.
+        </p>
+
+        <h2>
+        Adding your first album
+        </h2>
+        <p>
+        Use the "+ Add Artist" button to add a new artist. An artist can be removed with the "-" button and albums can be added with the "+" on the right of "Albums".
+        </p>
+
+        <h3>
+        Manage an album
+        </h3>
+        <p>
+        You can name an added album anything, add your rating in a 1-100 number and the album cover, however there is one thing you need to be aware of!
+        </p>
+
+        <h3>Album cover issues, also known as CORS</h3>
+        <p>When choosing your albums' covers, make sure to use good and trusted sources. Many image sources block Cross-Origin Resource Sharing, or better known as CORS.</p>
+        <p>This leads to album images not being visible when you export them. This is not a big issue, but one to be aware of.</p>
+        <p>Recommended album cover sources include: Spotify, Wikipedia, various streaming services. Do NOT use: magazines, album review pages, news websites.</p>
+
+        <h3>How do I change album order?</h3>
+        <p>We suggest you keep your artists' albums in the release order. On the left of each album, use the Grab button to drag albums up and down to change the order.</p>  
+
+        <h2>Managing several artists</h2>
+        <p>So artists are automatically sorted on the website, so there is NO need to worry about sorting artists or making a certain order. On the home page, using the "Sort:" dropdown, you can choose between Alphabetical and an Average Rating artist sorting.
+
+        <h3>
+        How does sorting work?
+        </h3>
+        <p><b>Alphabetical:</b> your artists are sorted from A to Z based on the English alphabet.</p>
+        <p><b>By ratings:</b> your artists are sorted based on a simple and fair calculation system. The artists albums' rankings (above 0) are all put into artist points.However, you can always change how it is being calculated in your settings.</p>
+
+        <h2>
+        Editor errors
+        </h2>
+        <p>
+        If you are experiencing errors with the 'Save' function, we are probably working on an update to our authentication and/or saving system. Please try again later- a fix is soon to come!</p>
+
+    </div>
+
+    <script src="editor_script.js"></script>
+</body>
+</html>
