@@ -3,8 +3,8 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
 [![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)
 [![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB)](#)
-[![GitHub created at](https://img.shields.io/github/created-at/sippedaway/sipped.org)](#)
-[![GitHub last commit](https://img.shields.io/github/last-commit/sippedaway/sipped.org)](#)
+[![GitHub created at](https://img.shields.io/github/created-at/sippedaway/Audomark)](#)
+[![GitHub last commit](https://img.shields.io/github/last-commit/sippedaway/Audomark)](#)
 
 # [Audomark](https://audomark.sipped.org/)
 Rank and manage your music in one place.
