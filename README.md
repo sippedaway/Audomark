@@ -9,6 +9,9 @@
 # [Audomark](https://audomark.sipped.org/)
 Rank and manage your music in one place.
 
+#### Repository note
+No backend code was imported to the repository for security reasons
+
 ### What is Audomark?
 Audomark is a website where you can add and rank your listened-to music. Here's how it works!
 
