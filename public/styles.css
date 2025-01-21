@@ -540,6 +540,10 @@ body.dark-mode .circle-button {
         display: none;
     }
 
+    #navbar {
+        display: none;
+    }
+
     .content {
         margin-top: 25px;
     }
