@@ -14,7 +14,7 @@ Rank and manage your music in one place. Keep and share your favorite artists, a
 [<kbd> <br> audomark.sipped.org <br> </kbd>](https://audomark.sipped.org)
 
 ## Status
-Currently **down for updates**
+Servers are back online yay ;)
 
 ## What is Audomark?
 Audomark is a website where you can add and rank your listened-to music. Here's how it works!
@@ -32,6 +32,12 @@ Uses a simple session ID system with Google and Discord oAuth2. Currently no use
 Made by sipped in under a month in December 2024 - January 2025. Made with HTML/CSS/JavaScript + express/node.js and is currently hosted on [audomark.sipped.org](https://audomark.sipped.org) (or sipped.org/audomark)
 
 ## Version
+#### 1.3 (Under development) / Major revamp
+- **Estimated release**: midway 02/25
+- Editor: completely removed
+- Home: built-in editor, click album or artist to edit/delete/manage
+- Settings: categorized by tabs
+- Authentication: sign-in by GitHub 
 #### 1.2 / Minor updates
 - GitHub: added server.js, README changes
 - Editor: button sizes optimization on mobile
