@@ -13,8 +13,11 @@ Rank and manage your music in one place. Keep and share your favorite artists, a
 
 [<kbd> <br> audomark.sipped.org <br> </kbd>](https://audomark.sipped.org)
 
-## Status
-Servers are back online yay ;)
+## Status + FEEDBACK
+When servers are unactive, the website isn't working, you found bugs, or have questions - **email me at** audomark@sipped.org
+Responses usually take <30 minutes unless I'm sleeping. Check my GitHub timezone
+
+My hosting service status page: https://status.webhostmost.com
 
 ## What is Audomark?
 Audomark is a website where you can add and rank your listened-to music. Here's how it works!
