@@ -33,6 +33,7 @@ When servers are unactive, the website isn't working, you found bugs, or have qu
 Responses usually take <30 minutes unless I'm sleeping. Check my GitHub timezone
 
 My hosting service status page: https://status.webhostmost.com
+
 **Currently unavailable due to 1.3 testing and development**
 
 ## Version
