@@ -34,15 +34,24 @@ Responses usually take <30 minutes unless I'm sleeping. Check my GitHub timezone
 
 My hosting service status page: https://status.webhostmost.com
 
-**Currently unavailable due to 1.3 testing and development**
+**(01/30) Currently online: send feedback for version 1.3**
 
 ## Version
-#### 1.3 (Under development) / Major revamp
-- **Estimated release**: midway 02/25
-- Editor: completely removed
-- Home: built-in editor, click album or artist to edit/delete/manage
-- Settings: categorized by tabs
-- Authentication: sign-in by GitHub 
+#### 1.3 / Major revamp
+- **Release**: 01/30
+- Home: artist name, artist icon, album title, album cover and album ratings are all editable now
+- Home: upload local files or use image URL to upload album/artist images
+- Home: delete and manage albums & artists immediately
+- Home: placeholder "New album" and "New artist"
+- Settings: categorized by tabs and information
+- Settings: added the Classic Editor explanation and visit button
+- Settings: fixed "Default sorting method" dropdown being offset on the left
+- Editor: removed from navbar (archived)
+- Authentication: sign-in by GitHub
+<br>**Known issues**:
+- Dark theme not in 401, 404 and "Delete account" pages
+- Home (Mobile): bad title and album rating visibility, usually cut off
+- Settings (Mobile): can't even explain, very not good
 #### 1.2 / Minor updates
 - GitHub: added server.js, README changes
 - Editor: button sizes optimization on mobile
@@ -50,6 +59,8 @@ My hosting service status page: https://status.webhostmost.com
 #### 1.1
 - Bug fixes, optimization
 - Known issues: Audomark header visible on mobile screens
+#### 1.0
+- Base release
 
 ## Credits
 - [sipped](https://github.com/sippedaway)
