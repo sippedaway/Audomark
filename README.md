@@ -48,6 +48,7 @@ My hosting service status page: https://status.webhostmost.com
 - Settings: fixed "Default sorting method" dropdown being offset on the left
 - Editor: removed from navbar (archived)
 - Authentication: sign-in by GitHub
+- GitHub: removed server.js for now
 <br>**Known issues**:
 - Dark theme not in 401, 404 and "Delete account" pages
 - Home (Mobile): bad title and album rating visibility, usually cut off
