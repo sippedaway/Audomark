@@ -39,6 +39,14 @@ body {
     background-color: #f4f4f4;
 }
 
+body.dark-mode .sidebar-menu button {
+    color: white;
+}
+
+body.dark-mode .sidebar-menu button:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.12);
+}
+
 .hlbutton {
     font-family: 'Neue Haas Grotesk', sans-serif;
     font-weight: 500;
@@ -265,6 +273,7 @@ body.dark-mode .detail-value {
 
 .rules-content label,
 .rules-content h2,
+.rules-content h4,
 .rules-content p,
 .rules-content .rule {
     margin-left: 10px;
@@ -457,4 +466,54 @@ body.dark-mode .nav-bar-icon-button:hover {
     max-width: 30px;
     max-height: 30px;
     border-radius: 50px;
+}
+
+.sidebar {
+    position: absolute;
+    width: 200px;
+    margin-left: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu button {
+    width: 200px;
+    text-align: left;
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 12px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sidebar-menu button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+    margin-top: 0;
+    width: calc(100% - 500px);
+    transition: margin-left 0.3s ease;
 }

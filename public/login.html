@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audomark</title>
-    <link rel="icon" type="image/x-icon" href="https://audomark.sipped.org/public/bg/favicon.png">
-    <link rel="stylesheet" href="login_styles.css">
+    <link rel="stylesheet" href="https://audomark.sipped.org/public/login_styles.css?v=20250130">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -28,27 +27,62 @@
             <p style="text-align:right">Export your full ranking as an image to share with anyone with one click</p>
 
             <h3>No ads. No subscriptions.</h3>
-            <p>We don't make money! Available anywhere, on all devices at any time... simply log in, below:</p>
+            <p>Non-profit, open-source. Available anywhere, on all devices at any time... simply log in, below:</p>
 
             <div class="bar">
-                <button id="google-button" onclick="window.location.href='https://audomark.sipped.org/auth/google';" class="google-button">
-                    <img src="./bg/google.png" alt="Google logo" class="logo"></img>
+                <button id="google-button" onclick="window.location.href='https://audomark.sipped.org/auth/google';" class="sb google">
+                    <img src="https://audomark.sipped.org/public/bg/google.png" alt="Google logo" class="logo"></img>
                     Sign in with Google
                 </button>
 
-                <button id="discord-button" onclick="window.location.href='https://audomark.sipped.org/auth/discord';" class="discord-button">
-                    <img src="./bg/discord.png" alt="Discord logo" class="logo"></img>
+                <button id="discord-button" onclick="window.location.href='https://audomark.sipped.org/auth/discord';" class="sb discord">
+                    <img src="https://audomark.sipped.org/public/bg/discord.png" alt="Discord logo" class="logo"></img>
                     Sign in with Discord
+                </button>
+
+                <button id="github-button" onclick="window.location.href='https://audomark.sipped.org/auth/github';" class="sb github">
+                    <img src="https://audomark.sipped.org/public/bg/github.png" alt="GitHub logo" class="logo"></img>
+                    Sign in with GitHub
                 </button>
             </div>
         </div>
 
-    <div class="right-panel">
-        <div class="artist"><div class="artist-header"><img src="https://preview.redd.it/new-spotify-pics-v0-e54jqvdsfx0d1.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=1188e42e39cc68ee117ba36e4af9e39635bf3ac2" alt="Billie Eilish" class="artist-icon"><h2>Billie Eilish</h2></div><div class="album"><img src="https://i.scdn.co/image/ab67616d00001e022a038d3bf875d23e4aeaa84e" alt="Happier Than Ever"><h3>Happier Than Ever</h3><div class="album-rating" style="background-image: url(&quot;./bg/80.png&quot;);"><span>86</span></div></div><div class="album"><img src="https://m.media-amazon.com/images/I/51TH1unr6lL._UXNaN_FMjpg_QL85_.jpg" alt="HIT ME HARD AND SOFT"><h3>HIT ME HARD AND SOFT</h3><div class="album-rating" style="background-image: url(&quot;./bg/90.png&quot;);"><span>97</span></div></div></div>
-        <div class="artist"><div class="artist-header"><img src="https://i.scdn.co/image/ab6761610000e5eb1a6373c01e8b86e289859f57" alt="boygenius" class="artist-icon"><h2>boygenius</h2></div><div class="album"><img src="https://upload.wikimedia.org/wikipedia/en/2/21/Boygenius_-_the_record.jpg" alt="the record"><h3>the record</h3><div class="album-rating" style="background-image: url(&quot;./bg/90.png&quot;);"><span>90</span></div></div><div class="album"><img src="https://upload.wikimedia.org/wikipedia/en/e/ee/Boygenius_-_the_rest.jpg" alt="The Rest"><h3>The Rest</h3><div class="album-rating" style="background-image: url(&quot;./bg/80.png&quot;);"><span>86</span></div></div></div>
+        <div class="right-panel">
+            <div class="artist"><div class="artist-header"><img src="https://preview.redd.it/new-spotify-pics-v0-e54jqvdsfx0d1.jpg?width=640&amp;crop=smart&amp;auto=webp&amp;s=1188e42e39cc68ee117ba36e4af9e39635bf3ac2" alt="Billie Eilish" class="artist-icon"><h2>Billie Eilish</h2></div><div class="album"><img src="https://i.scdn.co/image/ab67616d00001e022a038d3bf875d23e4aeaa84e" alt="Happier Than Ever"><h3>Happier Than Ever</h3><div class="album-rating" style="background-image: url(&quot;./bg/80.png&quot;);"><span>86</span></div></div><div class="album"><img src="https://m.media-amazon.com/images/I/51TH1unr6lL._UXNaN_FMjpg_QL85_.jpg" alt="HIT ME HARD AND SOFT"><h3>HIT ME HARD AND SOFT</h3><div class="album-rating" style="background-image: url(&quot;./bg/90.png&quot;);"><span>97</span></div></div></div>
+            <div class="artist"><div class="artist-header"><img src="https://i.scdn.co/image/ab6761610000e5eb1a6373c01e8b86e289859f57" alt="boygenius" class="artist-icon"><h2>boygenius</h2></div><div class="album"><img src="https://upload.wikimedia.org/wikipedia/en/2/21/Boygenius_-_the_record.jpg" alt="the record"><h3>the record</h3><div class="album-rating" style="background-image: url(&quot;./bg/90.png&quot;);"><span>90</span></div></div><div class="album"><img src="https://upload.wikimedia.org/wikipedia/en/e/ee/Boygenius_-_the_rest.jpg" alt="The Rest"><h3>The Rest</h3><div class="album-rating" style="background-image: url(&quot;./bg/80.png&quot;);"><span>86</span></div></div></div>
+        </div>
     </div>
-</div>
 
-    <script src="login_script.js"></script>
+    <div class="container mobile">
+        <h1 style="text-align:center;">Audomark - rank your music!</h1>
+
+            <h3>Simple ranking</h3>
+            <p>The 1-100 ranking system together with sorting makes for a simple-to-use and convenient website</p>
+
+            <h3>Get your statistics</h3>
+            <p>Top artists, albums, pie charts, rankings, fun stats, and more! It's like Spotify Wrapped but actually cool</p>
+
+            <h3>Share easily. No ads. Free.</h3>
+            <p>Export your full ranking as an image to share with anyone with one click. Non-profit, open-source</p>
+
+            <div class="bar">
+            <button id="google-button" onclick="window.location.href='https://audomark.sipped.org/auth/google';" class="sb google">
+                <img src="https://audomark.sipped.org/public/bg/google.png" alt="Google logo" class="logo"></img>
+                Sign in with Google
+            </button>
+
+            <button id="discord-button" onclick="window.location.href='https://audomark.sipped.org/auth/discord';" class="sb discord">
+                <img src="https://audomark.sipped.org/public/bg/discord.png" alt="Discord logo" class="logo"></img>
+                Sign in with Discord
+            </button>
+
+            <button id="github-button" onclick="window.location.href='https://audomark.sipped.org/auth/github';" class="sb github">
+                <img src="https://audomark.sipped.org/public/bg/github.png" alt="GitHub logo" class="logo"></img>
+                Sign in with GitHub
+            </button>
+            </div>
+    </div>
+
+    <script src="login_script.js?v=20250201"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@ function toggleDarkMode() {
 document.addEventListener('DOMContentLoaded', () => {    
     const accountData = {
         icon: userProfilePicture,
-        authMethod: '',
+        authMethod: 'Undefined',
         email: userEmail,
     };
 
@@ -29,7 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     accountIcon.classList.add('account-icon');
 
     const upfp = document.getElementById('pfp2');
-    upfp.src = userProfilePicture;
+    if(upfp) {
+        upfp.src = userProfilePicture;
+    }
 
     const accountDetails = document.createElement('div');
     accountDetails.classList.add('account-details');
@@ -41,6 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (authMethod === 'Discord') {
         accountData.authMethod = 'Discord';
         emailLabel = "Discord User ID:";
+    } else if (authMethod === 'GitHub') {
+        accountData.authMethod = 'GitHub';
+        emailLabel = "GitHub Username:";
     }
 
     const authMethodElement = document.createElement('p');
@@ -208,3 +213,16 @@ function downloadJson() {
             console.error('Error fetching or downloading user data:', error);
         });
 }
+
+
+function showTab(tabName) {
+    const tabs = document.querySelectorAll('.tb');
+    tabs.forEach(tab => {
+        tab.style.display = 'none';
+    });
+    document.getElementById(tabName).style.display = 'block';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    showTab('account');
+});

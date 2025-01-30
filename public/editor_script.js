@@ -22,7 +22,7 @@ function loadData() {
         .then(response => {
             if (!response.ok) {
                 if (response.status === 401) {
-                    window.location.href = "https://audomark.sipped.org/401";
+                    window.location.href = "https://audomark.sipped.org/login";
                 }
             }
             return response.json();

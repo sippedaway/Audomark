@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (authMethod === 'Discord') {
         accountData.authMethod = 'Discord';
         emailLabel = "Discord User ID:";
+    } else if (authMethod === 'GitHub') {
+        accountData.authMethod = 'GitHub';
+        emaillabel = 'Github Username:'
     }
 
     const authMethodElement = document.createElement('p');

@@ -148,13 +148,11 @@ body {
     position: absolute;
 }
 
-.discord-button {
+.sb {
     font-family: 'Neue Haas Grotesk', sans-serif;
     font-weight: 500;
     font-size: 16px;
     padding: 8px 12px;
-    background-color: #5865F2;
-    color: white;
     border: none;
     border-radius: 35px;
     cursor: pointer;
@@ -163,51 +161,55 @@ body {
     align-items: center;
 }
 
-.discord-button:hover {
+.sb img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.discord {
+    background-color: #5865F2;
+    color: white;
+}
+
+.discord:hover {
     background-color: #0056b3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.discord-button:focus {
+.discord:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.discord-button img {
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
-}
-
-.google-button {
-    font-family: 'Neue Haas Grotesk', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 8px 12px;
+.google {
     background-color: white;
     color: black;
-    border: none;
-    border-radius: 35px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    display: inline-flex;
-    align-items: center;
 }
 
-.google-button:hover {
+.google:hover {
     background-color: lightgray;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.google-button:focus {
+.google:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.google-button img {
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
+.github {
+    background-color: #2b3137;
+    color: white;
+}
+
+.github:hover {
+    background-color: #24292e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.github:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .button {
@@ -272,22 +274,28 @@ body.dark-mode .album:hover {
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
+.mobile {
+    display: none;    
+}
+
 @media screen and (max-width: 768px) {
 
     .left-panel,
     .right-panel {
-        width: 100%;
-        padding: 10px;
+        display: none;
+    }
+
+    body {
+        justify-content: center;
     }
 
     .container {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    p,h2,h3 {
-        display: none;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .google-button, .discord-button, .button {
@@ -304,8 +312,13 @@ body.dark-mode .album:hover {
     }
 
     .bar {
+        margin-top: 8%;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .mobile {
+        display: flex;
     }
 }
 

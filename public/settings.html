@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings | Audomark</title>
     <link rel="icon" type="image/x-icon" href="https://audomark.sipped.org/public/bg/favicon.png">
-    <link rel="stylesheet" href="settings_styles.css">
+    <link rel="stylesheet" href="https://audomark.sipped.org/public/settings_styles.css?v=20250201">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -18,7 +18,6 @@
         <div class="nav-bar-button-container">
             <button onclick="window.location.href='https://audomark.sipped.org/';" class="nav-bar-button">Home</button>
             <button onclick="window.location.href='https://audomark.sipped.org/statistics';" class="nav-bar-button">Statistics</button>
-            <button onclick="window.location.href='https://audomark.sipped.org/editor';" class="nav-bar-button">Edit</button>
         </div>
 
         <a id="currenttab" class="nav-bar-icon-button" onclick="window.location.href='https://audomark.sipped.org/settings';" style="box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);" target="_blank">
@@ -26,81 +25,120 @@
         </a>
     </div>
 
-    <div class="rules-content">
-        <h2>Change theme</h2>
-        <p>Toggle between light and dark theme</p>
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li><button onclick="showTab('account')">Account</button></li>
+            <li><button onclick="showTab('ratingSorting')">Rating and Sorting</button></li>
+            <li><button onclick="showTab('theme')">Theme</button></li>
+            <li><button onclick="showTab('info')">Information</button></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <div id="account" style="display: none;" class="tb">
+
+        <div class="account-content" id="accountContent">
+        </div>
+
+        <div class="rules-content">
+            <h2>Download your data</h2>
+            <p>You can download your album ratings as a .JSON file at any time</p>
     
-        <button style="margin-top: 15px; margin-left: 8px; margin-bottom: 8px;" class="button" id="dd" onclick="toggleDarkMode()">Change theme</button>
+            <button style="margin-top: 15px; margin-left: 8px; margin-bottom: 8px;" class="button" id="dd" onclick="downloadJson()">Download</button> 
+        </div>
+
+        <div class="rules-content">
+            <h2>Delete account</h2>
+            <p>This will permanently delete your account data, which includes your artists, albums and rankings.</p>
+            <button style="margin-top: 15px; margin-left: 8px; margin-bottom: 8px;" class="button" id="delete" onclick="window.location.href='https://audomark.sipped.org/deleteaccount';">Delete account</button> 
+        </div>
+
+        </div>
+
+        <div id="theme" class="rules-content tb" style="display: none;">
+            <h2>Change theme</h2>
+            <p>Toggle between light and dark theme</p>
+        
+            <button style="margin-top: 15px; margin-left: 8px; margin-bottom: 8px;" class="button" id="dd" onclick="toggleDarkMode()">Change theme</button>
+        </div>
+    
+        <div id="ratingSorting" style="display: none;" class="tb">
+
+            <div class="rules-content">
+                <h2>Default sorting method</h2>
+                <p>When you open the home page, automatically this sorting option will be chosen:</p>
+        
+                <select id="defaultSort" class="sort-dropdown" style="margin-left: 10px; margin-top: 10px;" onchange="saveSortPreference()">
+                    <option value="alphabetical">From A to Z</option>
+                    <option value="ratings">By Ratings</option>
+                </select>
+            </div>
+
+        <div class="rules-content">
+        <h2>Change your preferred rating system</h2>
+        <p>When you sort albums 'by rating' this is how an artist's ratings will be calculated:</p>
+    
+        <div class="rule">
+            <input type="checkbox" id="averageRating" checked="" disabled="">
+            <label for="averageRating">Average album rating (always on)</label>
+        </div>
+    
+        <div class="rule">
+            <input type="checkbox" id="above90" onclick="handleAbove90Change()">
+            <label for="above90">Average album rating above 90 adds +80 points</label>
+        </div>
+    
+        <div class="rule">
+            <input type="checkbox" id="rated100" onclick="handleRated100Change()">
+            <label for="rated100">100 rated album adds +90 points</label>
+        </div>
+    
+        <div class="rule">
+            <input type="checkbox" id="greater90" onclick="handleGreater90Change()">
+            <label for="greater90">Over 90 rated album adds +50 points</label>
+        </div>
+    
+        <div class="rule">
+            <input type="checkbox" id="greater50" onclick="handleGreater50Change()">
+            <label for="greater50">Over 50 rated album adds +20 points</label>
+        </div>
+    
+        <div class="rule">
+            <input type="checkbox" id="after3Albums" onclick="handleAfter3AlbumsChange()">
+            <label for="after3Albums">Each album after 3 albums adds +50 points</label>
+        </div>
+
+        </div>
+        </div>
+
+        <div id="info" class="tb">
+            <div class="rules-content">
+                <h2>Classic editor</h2>
+                <p>Before version 1.3, there was a seperate "Edit" page instead of the current Home page editing, which is more reliable and doesn't require switching tabs.</p>
+                <h4>Why was it removed?</h4>
+                <p>The updated Home page allows immediate editing and previewing how album covers will look, all quick and simple, and no need to go back and forth between the two pages</p>
+                <h4>Use the Classic Editor</h4>
+                <p>Yes! The seperate Editor page will always be available at audomark.sipped.org/editor for those who want to use it.</p>
+
+                <button style="margin-top: 15px; margin-left: 8px; margin-bottom: 8px;" class="button" id="dd" onclick='window.open("https://audomark.sipped.org/editor", "_blank")'>Go to the classic editor</button>
+            </div>
+
+            <div class="rules-content">
+                <h2>Open-source</h2>
+                <p>Audomark is mostly open-source and available on GitHub<br>Visit, add issues and leave feedback at anytime</p>
+
+                <button style="margin-top: 15px; margin-left: 8px; margin-bottom: 8px;" class="button" id="dd" onclick='window.open("https://github.com/sippedaway/Audomark", "_blank")'>Open the repository</button>
+            </div>
+
+            <div class="rules-content">
+                <h2>Version</h2>
+                <h4>1.3</h4>
+                <p>A complete revamp of the Home page, removal of the seperate Editor page, a sidebar in Settings and more.<br>Full patch notes in GitHub repository</p>
+            </div>
+        </div>
     </div>
 
-    <div id="accountContent" class="account-content">
-    </div>
-
-    <div class="rules-content">
-        <h2>Download your data</h2>
-        <p>You can download your album ratings as a .JSON file at any time</p>
-
-        <button style="margin-top: 15px; margin-left: 8px; margin-bottom: 8px;" class="button" id="dd" onclick="downloadJson()">Download</button> 
-    </div>
-
-    <div class="rules-content">
-        <h2>Default sorting method</h2>
-        <p>When you open the home page, automatically this sorting option will be chosen:</p>
-
-        <select id="defaultSort" class="sort-dropdown" style="margin-left: 20px;" onchange="saveSortPreference()">
-            <option value="alphabetical">From A to Z</option>
-            <option value="ratings">By Ratings</option>
-        </select>
-    </div>
-
-    <div class="rules-content">
-    <h2>Change your preferred rating system</h2>
-    <p>When you sort albums 'by rating' this is how an artist's ratings will be calculated:</p>
-
-    <div class="rule">
-        <input type="checkbox" id="averageRating" checked disabled>
-        <label for="averageRating">Average album rating (always on)</label>
-    </div>
-
-    <div class="rule">
-        <input type="checkbox" id="above90" onclick="handleAbove90Change()">
-        <label for="above90">Average album rating above 90 adds +80 points</label>
-    </div>
-
-    <div class="rule">
-        <input type="checkbox" id="rated100" onclick="handleRated100Change()">
-        <label for="rated100">100 rated album adds +90 points</label>
-    </div>
-
-    <div class="rule">
-        <input type="checkbox" id="greater90" onclick="handleGreater90Change()">
-        <label for="greater90">Over 90 rated album adds +50 points</label>
-    </div>
-
-    <div class="rule">
-        <input type="checkbox" id="greater50" onclick="handleGreater50Change()">
-        <label for="greater50">Over 50 rated album adds +20 points</label>
-    </div>
-
-    <div class="rule">
-        <input type="checkbox" id="after3Albums" onclick="handleAfter3AlbumsChange()">
-        <label for="after3Albums">Each album after 3 albums adds +50 points</label>
-    </div>
-    </div>
-
-    <div class="rules-content">
-        <h2>Delete account</h2>
-        <p>This will permanently delete your account data, which includes your artists, albums and rankings.</p>
-        <button style="margin-top: 15px; margin-left: 8px; margin-bottom: 8px;" class="button" id="delete" onclick="window.location.href='https://audomark.sipped.org/deleteaccount';">Delete account</button> 
-    </div>
-
-    <div class="rules-content">
-        <h2>How your settings are stored</h2>
-        <p>After you choose a setting, like your default sorting method, it will automatically save on localStorage.</p>
-        <p>localStorage is stored locally on your browser (and is completely safe!), not in your account details</p>
-    </div>
-
-    <script src="settings_script.js"></script>
-
+    <script src="https://audomark.sipped.org/public/settings_script.js?v=20250130"></script>
 </body>
 </html>
