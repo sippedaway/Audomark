@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>401 | Audomark</title>
+    <title>Signed out | Audomark</title>
     <link rel="icon" type="image/x-icon" href="https://audomark.sipped.org/public/bg/favicon.png">
-    <link rel="stylesheet" href="https://audomark.sipped.org/public/login_styles.css"></link>
+    <link rel="stylesheet" href="https://audomark.sipped.org/public/login_styles.css?v=20250201"></link>
     <style>
     body {
             margin: 0;
@@ -49,14 +49,19 @@
 
         <p>Sign-in using the buttons below</p>
 
-        <button id="google-button" onclick="window.location.href='https://audomark.sipped.org/auth/google';" class="google-button">
+        <button id="google-button" onclick="window.location.href='https://audomark.sipped.org/auth/google';" class="sb google" style="margin-bottom: 15px; margin-top: 15px;">
             <img src="https://audomark.sipped.org/bg/google.png" alt="Google logo" class="logo"></img>
             Sign in with Google
         </button>
 
-        <button id="discord-button" onclick="window.location.href='https://audomark.sipped.org/auth/discord';" class="discord-button">
+        <button id="discord-button" onclick="window.location.href='https://audomark.sipped.org/auth/discord';" class="sb discord" style="margin-bottom: 15px;">
             <img src="https://audomark.sipped.org/bg/discord.png" alt="Discord logo" class="logo"></img>
             Sign in with Discord
+        </button>
+
+        <button id="github-button" onclick="window.location.href='https://audomark.sipped.org/auth/github';" class="sb github">
+            <img src="https://audomark.sipped.org/bg/github.png" alt="GitHub logo" class="logo"></img>
+            Sign in with GitHub
         </button>
     </div>
 
