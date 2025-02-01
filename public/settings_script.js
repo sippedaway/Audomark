@@ -29,8 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     accountIcon.classList.add('account-icon');
 
     const upfp = document.getElementById('pfp2');
+    const mpfp = document.getElementById('mpfp');
     if(upfp) {
         upfp.src = userProfilePicture;
+    }
+    if (mpfp) {
+        mpfp.src = userProfilePicture;
     }
 
     const accountDetails = document.createElement('div');

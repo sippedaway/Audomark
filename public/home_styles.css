@@ -104,6 +104,14 @@ body {
     border-bottom: 2px solid black;
 }
 
+body.dark-mode .hinput:hover, .hinput:focus {
+    border-bottom: 2px solid white;
+}
+
+body.dark-mode .albumnameinput:hover, .albumnameinput:focus {
+    border-bottom: 2px solid white;
+}
+
 .artist-icon {
     width: 50px;
     height: 50px;
@@ -116,6 +124,10 @@ body {
 
 .artist-icon:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .artist-icon:hover {
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
 }
 
 .album {
@@ -163,6 +175,10 @@ body {
 
 .album img:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .album img:hover {
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
 }
 
 .album h3 {
@@ -628,6 +644,10 @@ body.dark-mode .circle-button {
 }
 
 @media screen and (max-width: 790px) {
+    body {
+        overflow-x: hidden;
+    }
+
     #mainHeader, .search-sort-bar {
         display: none;
     }
@@ -655,28 +675,42 @@ body.dark-mode .circle-button {
 }
 
 @media screen and (max-width: 550px) {
-    .album h3 {
-        max-width: 70px;
+    .albumnameinput {
+        max-width: 200px;
+        text-overflow: ellipsis;
+        font-size: 1.2em;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 514px) {
+    .albumnameinput {
+        max-width: 125px;
+        font-size: 1.1em;
+    }
+
     .album img {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
     }
 
-    .album-rating span {
-        color: black;
-        text-shadow: none;
-    }
-
-    .album h3 {
-        font-size: 15px;
+    .album-rating-wrapper img {
+        width: 40px;
+        height: 20px;
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
+    .hinput {
+        max-width: 145px;
+    }
+}
+
+@media screen and (max-width: 436px) {
+    .albumnameinput {
+        text-align: left;
+        max-width: 170px;
+    }
+
     .album img {
         display: none;
     }

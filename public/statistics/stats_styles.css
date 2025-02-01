@@ -388,3 +388,109 @@ body.dark-mode .nav-bar-icon-button:hover {
     max-height: 30px;
     border-radius: 50px;
 }
+
+.mobile-header {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: black;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+body.dark-mode .mobile-header {
+    background-color: #2a2a2a;
+}
+
+.circle-button {
+    background: #2a2a2a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.circle-icon {
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+}
+
+body.dark-mode .circle-button {
+    background: white;
+    color: #2a2a2a;
+}
+
+.mobile-search-sort-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    height: 20px;
+    margin-top: 80px;
+}
+
+.mobile-search-bar-container {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-search-icon {
+    margin-right: 10px;
+    color: #333;
+}
+
+.mobile-search-bar {
+    font-family: 'Neue Haas Grotesk';
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 12px 8px 40px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-sort-label {
+    margin-right: 10px;
+    color: #333;
+}
+
+.mobile-sort-dropdown {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 790px) {
+    #navbar {
+        display: none;
+    }
+    .mobile-header {
+        display: flex;
+    }
+
+    .stats-page {
+        margin-top: 60px;
+    }
+}

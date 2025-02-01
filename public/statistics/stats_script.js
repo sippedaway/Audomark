@@ -1,5 +1,17 @@
 const userpfp = getCookie('userProfilePicture');
 
+function toggleDarkMode() {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    if (isDarkMode) {
+        localStorage.setItem('darkMode', 'false');
+        document.body.classList.remove('dark-mode');
+    } else {
+        localStorage.setItem('darkMode', 'true');
+        document.body.classList.add('dark-mode');
+    }
+}
+
 function fetchUserData() {
     return fetch('/server/user/get-data', {
         method: 'GET',
@@ -74,8 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         upfp = document.getElementById('pfp');
         upfp2 = document.getElementById('pfp2');
+        upfp3 = document.getElementById('mpfp');
         upfp.src = userpfp;
         upfp2.src = userpfp;
+        upfp3.src = userpfp;
 
         document.getElementById('total-albums').textContent = allAlbums.length;
         document.getElementById('total-artists').textContent = data.length;

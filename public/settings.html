@@ -5,11 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings | Audomark</title>
     <link rel="icon" type="image/x-icon" href="https://audomark.sipped.org/public/bg/favicon.png">
-    <link rel="stylesheet" href="https://audomark.sipped.org/public/settings_styles.css?v=20250201">
+
+    <link rel="stylesheet" href="https://audomark.sipped.org/public/settings_styles.css?v=20260111">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="nav-bar">
+    <!-- MOBILE -->
+    <div id="mobileHeader" class="mobile-header">
+        <button id="mobileHomeButton" class="circle-button" onclick="window.location.href='https://audomark.sipped.org/';">
+            <i class="fas fa-home"></i>
+        </button>
+        <button id="mobileEditButton" class="circle-button" onclick="window.location.href='https://audomark.sipped.org/statistics';">
+            <i class="fas fa-chart-line"></i>
+        </button>
+        <button id="mobileExportButton" class="circle-button" onclick="generateShareImage()" style="background-color: gray;">
+            <i class="fas fa-share"></i>
+        </button>
+        <button id="mobileThemeButton" class="circle-button" onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i>
+        </button>
+        <a onclick="window.location.href='https://audomark.sipped.org/settings';" id="account-link" target="_blank">
+            <img class="circle-icon" id="mpfp" src="" alt="Profile Picture">
+        </a>
+    </div>
+
+    <div class="nav-bar" id="navbar">
         <a class="nav-bar-icon-button" onclick="window.location.href='https://audomark.sipped.org/';" target="_blank">
             <img class="a-iconw" src="https://audomark.sipped.org/public/bg/a_white.png" alt="arone icon"></img>
             <img class="a-iconb" src="https://audomark.sipped.org/public/bg/a_black.png" alt="arone icon"></img>
@@ -33,6 +53,13 @@
             <li><button onclick="showTab('info')">Information</button></li>
         </ul>
     </div>
+
+    <div class="mobile-sidebar">
+        <button onclick="showTab('account')">Account</button>
+        <button onclick="showTab('ratingSorting')">Rating & Sorting</button>
+        <button onclick="showTab('theme')">Theme</button>
+        <button onclick="showTab('info')">Info</button>
+    </div>    
 
     <div class="main-content">
 
@@ -139,6 +166,6 @@
         </div>
     </div>
 
-    <script src="https://audomark.sipped.org/public/settings_script.js?v=20250130"></script>
+    <script src="https://audomark.sipped.org/public/settings_script.js?v=20260102"></script>
 </body>
 </html>
