@@ -34,9 +34,18 @@ Responses usually take <30 minutes unless I'm sleeping. Check my GitHub timezone
 
 My hosting service status page: https://status.webhostmost.com
 
-**(01/30) Currently online: send feedback for version 1.3**
+**(02/01) Currently online: version 1.4 out now**
 
 ## Version
+#### 1.4 / Minor fixes
+- **Release**: 02/01
+- All pages: on mobile, added mobile navigation bar to all pages
+- All pages: dark mode coloring fixes
+- Home: fixed all mobile layout bugs and added various CSS mobile optimizations
+- Settings: added a seperate optimized sidebar for smaller width screens
+
+**Known issues**:
+- Home: on maximum width screens album title letter count is too small to utilize the width
 #### 1.3 / Major revamp
 - **Release**: 01/30
 - Home: artist name, artist icon, album title, album cover and album ratings are all editable now
@@ -49,7 +58,8 @@ My hosting service status page: https://status.webhostmost.com
 - Editor: removed from navbar (archived)
 - Authentication: sign-in by GitHub
 - GitHub: removed server.js for now
-<br>**Known issues**:
+  
+**Known issues**:
 - Dark theme not in 401, 404 and "Delete account" pages
 - Home (Mobile): bad title and album rating visibility, usually cut off
 - Settings (Mobile): can't even explain, very not good
